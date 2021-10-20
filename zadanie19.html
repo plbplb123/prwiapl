@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>
+ Przykład pole i obwod prostokata
+</title>
+<meta charset="UTF-8">
+ <script language="JavaScript">
+function pole_palu(a_palu, b_palu)
+{
+ a_dana_palu=parseFloat(a_palu)
+ b_dana_palu=parseFloat(b_palu)
+ Pole=a_dana_palu*b_dana_palu
+ document.getElementsByName('pole')[0].value=Pole.toFixed(2); /* na dokument */
+ alert("Pole="+Pole.toFixed(2)+" cm^2"); /*do okna Alert */
+ wprowadz_pole_palu.innerHTML="Pole="+Pole.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function obowod_palu(a_palu,b_palu)
+{
+ a_dana_palu=parseFloat(a_palu)
+ b_dana_palu=parseFloat(b_palu)
+ Obwod=a_dana_palu+a_dana_palu+b_dana_palu+b_dana_palu
+ document.getElementsByName('obwod')[0].value=Obwod.toFixed(2);
+ alert("Obwod="+Obwod.toFixed(2)+" cm");
+ wprowadz_obwod_palu.innerHTML="Obwod="+Obwod.toFixed(2)+"cm";
+}
+ </script>
+ </head>
+ <body>
+ Obliczanie pola i obwodu prostokata
+ <br> <br>
+ <form name="formularz" action="..." onsubmit="pole_palu(this.promien.value,this.wysokosc.value);
+ obowod_palu(this.promien.value,this.wysokosc.value);return false">
+ Podaj a=
+ <input size="6" name="promien">
+ Podaj b=
+ <input size="6" name="wysokosc">
+ <br>
+ <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br>
+ <br>
+ Pole=
+ <input size="6" name="pole">
+ Obwod=
+ <input size="6" name="obwod">
+ </form>
+ <table>
+ <tr id="wprowadz_pole_palu"></tr>
+ <tr id="wprowadz_obwod_palu"></tr>
+ </table>
+ </body>
+ </html>
