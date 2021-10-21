@@ -1,0 +1,36 @@
+<html>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+function rb()
+{
+var x = document.getElementById('form_a').value
+if(x==1)
+{
+document.write("<font color=red size=4>wpisałes kolor czerwony</font>"+"<br>");
+}
+else if(x==2)
+{
+document.write("<font color=blue size=4>wpisałes kolor niebieski</font>"+"<br>");
+}
+else if(x=="czerwony")
+{
+document.write("<font color=red size=4>wpisałes kolor czerwony</font>"+"<br>");
+}
+else if(x=="niebieski")
+{
+document.write("<font color=blue size=4>wpisałes kolor niebieski</font>"+"<br>");
+}
+
+}
+</script>
+</div>
+<form onSubmit="return rb()">
+<p style="font-size: 1cm; color:green;"> MENU </p> <br>
+<p style="font-size: 0.5cm; color:red;"> 1 - Czerwony </p> <br>
+<p style="font-size: 0.5cm; color:blue;"> 2 - Niebieski </p> <br>
+<input type="text" id="form_a" name="form[a]" required="required" />
+<button type="submit" class='input_submit' value="Update">
+</form>
+</body>
+</html>
