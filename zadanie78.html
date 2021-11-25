@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<script language="JavaScript">
+var liczba1 = prompt("R=");
+var R = parseFloat(liczba1);
+var licznik_pal = 0;
+
+for(var i=Math.round(R)-1; i<=Math.round(R)+1; i++)
+{
+for(var j=-R; j<=R; j++)
+{
+d=Math.sqrt(i*i+j*j);
+document.write("D="+d+"<br>");
+document.write("["+i+","+j+"]");
+if(d <= R){
+licznik_pal++;
+}
+}
+document.write("<br>");
+}
+document.write("licznik:" +licznik_pal+ "<br>");
+</script>
+</head>
+<body>
+<table>
+<tr>
+<th>Promień koła R </th>
+<th> Liczba punktów kratowych N(R)  </th>
+</tr>
+<tr>
+<td> 2,01 </td><td> 4 </td>
+</tr>
+<tr>
+<td> 4,50 </td><td> 4 </td>
+</tr>
+<tr>
+<td> 104 </td><td> 30 </td>
+</tr><tr>
+<td> 1004 </td><td> 90 </td>
+</tr>
+
+
+</table>
+</body>
+</html>
